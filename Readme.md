@@ -1,11 +1,11 @@
 # Leaves
 
-A explorative project to grasp some of the data science sprouts
+An explorative project to grasp some of the data science sprouts
 
 ## Install dependencies
 In the root directory:
 - Run `make`
 
 ## Requirements
-- A Unix environment
+- A `Unix` environment
 - Python and pip
