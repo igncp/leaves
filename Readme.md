@@ -7,4 +7,5 @@ In the root directory:
 - Run `make`
 
 ## Requirements
+- A Unix environment
 - Python and pip
