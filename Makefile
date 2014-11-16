@@ -1,4 +1,4 @@
-all: install-tools make-bins-executable make-vendors-executable
+all: install-tools set-executable-perms
 
 install-tools: i-csv-tools i-jq make-vendors-executable
 
@@ -9,8 +9,7 @@ i-jq:
 	@curl -s http://stedolan.github.io/jq/download/linux64/jq > vendors/jq
 	@echo 'Downloaded jq for Linux 64. If that is not your case, download it, place it under vendors with jq name and make it executable'
 
-make-bins-executable:
+set-executable-perms:
 	@chmod +x ./bin/*
-
-make-vendors-executable:
 	@chmod +x ./vendors/*
+	@chmod +x ./tools/*

@@ -2,3 +2,6 @@
 
 CSV
 - us-500: http://www.briandunning.com/sample-data/
+
+TXT
+- bacon: http://baconipsum.com/
