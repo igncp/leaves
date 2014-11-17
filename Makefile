@@ -4,6 +4,7 @@ install-tools: i-csv-tools i-jq make-vendors-executable
 
 i-csv-tools:
 	@sudo pip install csvkit
+	@sudo pip install nose
 
 i-jq:
 	@curl -s http://stedolan.github.io/jq/download/linux64/jq > vendors/jq
