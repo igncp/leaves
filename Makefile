@@ -1,10 +1,11 @@
-all: install-tools set-executable-perms
+all: install-tools set-executable-perms 
 
-install-tools: i-csv-tools i-jq make-vendors-executable
+install-tools: i-python-modules i-jq
 
-i-csv-tools:
+i-python-modules:
 	@sudo pip install csvkit
 	@sudo pip install nose
+	sudo apt-get install python-matplotlib python-tk
 
 i-jq:
 	@curl -s http://stedolan.github.io/jq/download/linux64/jq > vendors/jq
