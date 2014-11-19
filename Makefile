@@ -5,7 +5,7 @@ install-tools: i-python-modules i-jq
 i-python-modules:
 	@sudo pip install csvkit
 	@sudo pip install nose
-	sudo apt-get install python-matplotlib python-tk
+	sudo apt-get install python-matplotlib python-tk python-pandas
 
 i-jq:
 	@curl -s http://stedolan.github.io/jq/download/linux64/jq > vendors/jq

@@ -2,6 +2,7 @@ import unittest
 import numpy as np
 import matplotlib.pyplot as pl
 import math
+import os
 
 # Using parts of Python for Data Analysis - Wes McKinney
 
@@ -60,8 +61,9 @@ class ArraysTestCase(unittest.TestCase):
     self.assertEquals(round(z[0][0],0), 14) # sqrt(200)
     self.assertEquals(round(z[1000][1000],0), 0)
     # Create plot
-    pl.imshow(z, cmap=pl.cm.Blues)
-    pl.colorbar()
-    pl.title("Image plot of $\sqrt{x^2 + y^2}$ for a grid of values")
-    pl.savefig("plots/python/mesh.png")
-    pl.close()
+    if os.environ['LEAVES_PYTHON_WITH_PLOTS'] == 'true':
+      pl.imshow(z, cmap=pl.cm.Blues)
+      pl.colorbar()
+      pl.title("Image plot of $\sqrt{x^2 + y^2}$ for a grid of values")
+      pl.savefig("plots/python/mesh.png")
+      pl.close()

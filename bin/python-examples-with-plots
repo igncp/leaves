@@ -1,0 +1,1 @@
+(export LEAVES_PYTHON_WITH_PLOTS=true; nosetests  python) # Exports variable just in the subshell

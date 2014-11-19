@@ -11,6 +11,6 @@ In the root directory:
 - Run `make`
 
 ## Requirements
-- A `Unix` environment
+- A Debian environment
 - Make
 - Python and pip
