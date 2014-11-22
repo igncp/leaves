@@ -2,3 +2,4 @@ vendors/*
 !vendors/Readme.md
 *.pyc
 *.png
+credentials.yml
