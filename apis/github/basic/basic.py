@@ -1,8 +1,7 @@
 import yaml
-import json
 from github import Github
-import pandas as pd
-import numpy as np
+from pandas import Series
+
 
 def Main():
   credentials = open('apis/github/credentials/credentials.yml', 'r')
@@ -11,7 +10,14 @@ def Main():
   client = Github(ACCESS_TOKEN, per_page=100)
   keywords = raw_input("Please, enter keywords to search repositories: ")
   search = client.search_repositories(keywords)
-  print 'Total count: ' + str(search.totalCount)
+  first_page = search.get_page(0)
+
+  languages = Series(r.language for r in first_page)
+  languages = languages.dropna()
+  languages.sort()
+
+  print 'Languages percentage:'
+  print languages.value_counts() / len(languages) * 100
 
 if __name__ == "__main__":
   Main()
