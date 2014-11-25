@@ -8,16 +8,11 @@ def Main():
   credentials = yaml.load(credentials)
   ACCESS_TOKEN = credentials['access-token']
   client = Github(ACCESS_TOKEN, per_page=100)
-  keywords = raw_input("Please, enter keywords to search repositories: ")
-  search = client.search_repositories(keywords)
-  first_page = search.get_page(0)
+  username = raw_input("Please, enter a user name: ")
+  user = client.get_user(username)
 
-  languages = Series(r.language for r in first_page)
-  languages = languages.dropna()
-  languages.sort()
+  print 'The user\'s displayed name is ' + user.name
 
-  print 'Languages percentage:'
-  print languages.value_counts() / len(languages) * 100
 
 if __name__ == "__main__":
   Main()

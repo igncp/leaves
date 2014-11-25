@@ -6,6 +6,7 @@ i-python-modules:
 	@sudo pip install csvkit
 	@sudo pip install nose
 	@sudo pip install pygithub
+	@sudo pip install pymongo
 	sudo apt-get install python-matplotlib python-tk python-pandas
 
 i-jq:
