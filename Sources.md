@@ -5,3 +5,5 @@ Some of the resources consulted for learning
 - Python for Data Analysis - Wes McKinney
 
 - Think Stats - Allen B. Downey
+
+The project logo is a free licensed image of: [boatoom](https://dribbble.com/buatoom)

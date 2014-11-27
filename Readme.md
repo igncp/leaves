@@ -1,5 +1,7 @@
 # Leaves
 
+[![Leaves Logo](/misc/logo.png)](https://github.com/igncp/leaves)
+
 An explorative project to grasp some of the data science sprouts.
 
 ## Use
