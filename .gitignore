@@ -3,3 +3,4 @@ vendors/*
 *.pyc
 *.png
 credentials.yml
+!/misc/*.png
