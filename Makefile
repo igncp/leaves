@@ -10,7 +10,9 @@ i-python-modules:
 	@sudo pip install requests_oauthlib
 	@sudo pip install python-linkedin
 	@sudo pip install pymongo
-	sudo apt-get install python-matplotlib python-tk python-pandas
+	@sudo pip install pyyaml
+	@sudo pip install seaborn
+	sudo apt-get install python-matplotlib python-tk python-pandas python-scipy
 
 i-jq:
 	@curl -s http://stedolan.github.io/jq/download/linux64/jq > vendors/jq

@@ -1,4 +1,4 @@
-Some of the resources consulted for learning
+Some of the resources consulted for this project:
 
 - Data Science at the Command Line - Jeroen Janssens
 
@@ -6,4 +6,4 @@ Some of the resources consulted for learning
 
 - Think Stats - Allen B. Downey
 
-The project logo is a free licensed image of: [boatoom](https://dribbble.com/buatoom)
+The project's logo is a free licensed image of: [boatoom](https://dribbble.com/buatoom)
