@@ -6,4 +6,6 @@ Some of the resources consulted for this project:
 
 - Think Stats - Allen B. Downey
 
+- Doing Data Science - Rachel Schutt & Cathy O'Neil
+
 The project's logo is a free licensed image of: [boatoom](https://dribbble.com/buatoom)
