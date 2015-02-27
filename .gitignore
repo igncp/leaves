@@ -4,3 +4,4 @@ vendors/*
 *.png
 credentials.yml
 !/misc/*.png
+.vagrant
