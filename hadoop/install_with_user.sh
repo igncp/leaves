@@ -18,15 +18,6 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 sudo apt-get update
 sudo apt-get install -y oracle-java8-installer
 
-curl -O http://ftp.cixug.es/apache/hadoop/common/stable/hadoop-2.6.0.tar.gz
-
-gunzip hadoop-2.6.0.tar.gz
-tar -xvf hadoop-2.6.0.tar
-rm hadoop-2.6.0.tar
-sudo mv hadoop-2.6.0 /usr/local/hadoop
-sudo mkdir /development
-sudo chown vagrant /development/
-
 cd /etc/apt/sources.list.d
 sudo curl -O http://public-repo-1.hortonworks.com/ambari/ubuntu12/1.x/updates/1.7.0/ambari.list
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
@@ -46,5 +37,3 @@ mv pg2701.txt /development/data
 cd /development
 hdfs dfs -mkdir wordcount
 hdfs dfs -copyFromLocal data/pg2701.txt wordcount/mobydick.txt
-
-curl http://j.mp/spf13-vim3 -L -o - | sh
