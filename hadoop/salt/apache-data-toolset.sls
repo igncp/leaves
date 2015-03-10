@@ -27,3 +27,15 @@
     - name: "gunzip {{ tool.name_full }}.tar.gz; tar -xvf {{ tool.name_full }}.tar; rm {{ tool.name_full }}.tar; mv {{ tool.name_full }} /usr/local/{{ tool.name_short }}"
     - creates: "/usr/local/{{ tool.name_short }}"
 {% endfor %}
+
+download-ambari:
+  cmd.run:
+    - cwd: /etc/apt/sources.list.d
+    - creates: /etc/apt/sources.list.d/ambari.list
+    - name: wget "http://public-repo-1.hortonworks.com/ambari/ubuntu12/1.x/updates/1.7.0/ambari.list"; apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
+    - require_in:
+      - pkg: ambari-server
+
+ambari-server:
+  pkg.installed:
+    - refresh: True
