@@ -5,6 +5,6 @@ base:
     - nodejs
     - vim
     - python
-    - hadoop
+    - apache-data-toolset
     - bashrc
     - dir-development
