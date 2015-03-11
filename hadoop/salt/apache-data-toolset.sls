@@ -11,6 +11,10 @@
     'name_short': 'storm',
     'name_full': 'apache-storm-0.9.3',
     'url': 'http://apache.rediris.es/storm/apache-storm-0.9.3/apache-storm-0.9.3.tar.gz'
+  }, {
+    'name_short': 'hive',
+    'name_full': 'apache-hive-1.1.0-bin',
+    'url': 'http://apache.rediris.es/hive/hive-1.1.0/apache-hive-1.1.0-bin.tar.gz'
   }
 ] %}
 
@@ -27,6 +31,7 @@
     - name: "gunzip {{ tool.name_full }}.tar.gz; tar -xvf {{ tool.name_full }}.tar; rm {{ tool.name_full }}.tar; mv {{ tool.name_full }} /usr/local/{{ tool.name_short }}"
     - creates: "/usr/local/{{ tool.name_short }}"
 {% endfor %}
+
 
 download-ambari:
   cmd.run:
