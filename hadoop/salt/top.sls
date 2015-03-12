@@ -7,4 +7,4 @@ base:
     - python
     - apache-data-toolset
     - bashrc
-    - dir-development
+    - data-infrastructure

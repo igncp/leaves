@@ -5,7 +5,6 @@ To try this:
 ``` shell
 $ vagrant up
 $ vagrant ssh
-$ sh instal_with_user.sh
-$ ./scripts/run_hadoop.sh # in /development
-$ less wordcount/output/part-00000
+$ ./scripts/wordcount/wordcount.sh # in /development
+$ less hdfs-dir/wordcount/output/part-00000
 ```
