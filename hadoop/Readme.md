@@ -1,5 +1,3 @@
-The provisioner is currently changing from Puppet to Salt.
-
 To try this:
 
 ``` shell
