@@ -18,3 +18,7 @@ In the root directory:
 - A Debian environment
 - Make
 - Python and pip
+- Vagrant
+
+# Big Data
+For scripts related to big data technologies, such as Hadoop or Pig, go to the `hadoop` directory.
