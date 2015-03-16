@@ -1,0 +1,1 @@
+head -n1000 data/gutenberg-book.txt | python scripts/wordcount/mapper.py | sort | python scripts/wordcount/reduce.py

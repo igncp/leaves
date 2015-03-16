@@ -1,1 +1,0 @@
-head -n1000 data/pg2701.txt | python scripts/mapper.py | sort | python scripts/reducer.py
