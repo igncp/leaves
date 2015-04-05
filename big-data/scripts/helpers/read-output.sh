@@ -1,0 +1,1 @@
+less hdfs-dir/$1/output/part-00000
