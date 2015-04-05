@@ -9,5 +9,4 @@ And a Hadoop script:
 
 ```
 $ ./scripts/wordcount/wordcount.sh # in /development
-$ less hdfs-dir/wordcount/output/part-00000
 ```
