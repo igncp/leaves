@@ -21,4 +21,4 @@ In the root directory:
 - Vagrant
 
 # Big Data
-For scripts related to big data technologies, such as Hadoop or Pig, go to the `hadoop` directory.
+For scripts related to big data technologies, such as Hadoop or Pig, go to the `big-data` directory.
