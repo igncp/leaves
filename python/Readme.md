@@ -1,1 +1,0 @@
-Examples of local data manipulation, with unit tests format, using Python

@@ -2,13 +2,12 @@ import unittest
 import pandas as pd
 import numpy as np
 from pandas import Series
-import matplotlib.pyplot as pl
-import os
 
 # Using parts of Python for Data Analysis - Wes McKinney
 
 ser1 = Series([1, 4, 6, 8])
 ser2 = Series([1, 6, -1, 2, None], index=['g', 'r', 'a', 'z', 'u'])
+
 
 class SeriesTestCase(unittest.TestCase):
   def using_series_test(self):

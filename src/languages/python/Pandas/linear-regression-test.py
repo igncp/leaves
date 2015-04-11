@@ -5,7 +5,6 @@ import unittest
 import pandas as pd
 import numpy as np
 import random as rd
-import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
@@ -23,6 +22,7 @@ data = pd.Series(data)
 # Calculate linear regression
 a0, b0 = np.polyfit(data.index, data, 1)
 
+
 class LinearRegressionTestCase(unittest.TestCase):
   def calculated_values_are_similar_test(self):
     self.assertTrue(abs(a - a0) < abs(2 * a))
@@ -38,6 +38,6 @@ class LinearRegressionTestCase(unittest.TestCase):
       plt.plot(linear_regression, 'r')
       plt.title('Linear Regression Example')
       plt.tight_layout()
-      filepath = 'plots/python/linear-regression.png'
+      filepath = 'reports/languages/python/linear-regression.png'
       plt.savefig(filepath)
       plt.close()

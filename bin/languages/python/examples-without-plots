@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+RELATIVE_DIR=$(dirname "$0")
+
+export LEAVES_PYTHON_WITH_PLOTS=false
+
+sh "$RELATIVE_DIR"/_examples

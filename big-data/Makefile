@@ -1,3 +1,2 @@
-copy-files:
-	cp -r ./scripts /development/
-	chmod +x /development/scripts/*
+set-executables:
+	chmod +x scripts/**/*.sh

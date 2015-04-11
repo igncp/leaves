@@ -11,3 +11,5 @@ And a Hadoop script:
 $ ./scripts/wordcount/wordcount.sh # in /development
 $ less hdfs-dir/wordcount/output/part-00000
 ```
+
+Note that the `sentencecount` case is not working.

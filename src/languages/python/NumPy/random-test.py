@@ -24,5 +24,5 @@ class RandomTestCase(unittest.TestCase):
       pl.title("Random position change for 1000 steps")
       pl.ylabel('Position')
       pl.xlabel('Steps')
-      pl.savefig("plots/python/random-direction.png")
+      pl.savefig("reports/languages/python/random-direction.png")
       pl.close()

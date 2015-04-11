@@ -1,4 +1,6 @@
-all: install-tools set-executable-perms 
+# previous ----
+
+all: install-tools
 
 install-tools: i-python-modules i-jq
 
@@ -18,7 +20,8 @@ i-jq:
 	@curl -s http://stedolan.github.io/jq/download/linux64/jq > vendors/jq
 	@echo 'Downloaded jq for Linux 64. If that is not your case, download it, place it under vendors with jq name and make it executable'
 
-set-executable-perms:
-	@chmod +x ./bin/*
-	@chmod +x ./vendors/*
-	@chmod +x ./tools/*
+
+# new -----
+
+set-executables:
+	@find bin -not -name _* | xargs chmod +x # Exclude files beginning with a dash for executables
