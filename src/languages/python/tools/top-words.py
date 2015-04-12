@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # From the book: Data Science at the Command Line (Jeroen Janssens)
 
 import re

@@ -1,1 +1,0 @@
-curl -s http://api.randomuser.me | vendors/jq '.'

@@ -66,5 +66,7 @@ class ArraysTestCase(unittest.TestCase):
       pl.imshow(z, cmap=pl.cm.Blues)
       pl.colorbar()
       pl.title("Image plot of $\sqrt{x^2 + y^2}$ for a grid of values")
-      pl.savefig("reports/languages/python/mesh.png")
+      filepath = 'reports/languages/python/'
+      if not os.path.isdir(filepath): os.makedirs(filepath)
+      pl.savefig(filepath + "mesh.png")
       pl.close()

@@ -3,8 +3,8 @@
   'python-matplotlib',
   'python-mysqldb',
   'python-numpy',
-  'python-pandas',
   'python-tk',
+  'python-scipy',
 ] %}
 
 {% for module in python2_other %}
@@ -14,3 +14,12 @@ python-other-{{ module }}:
     - require:
       - pkg: python-pip
 {% endfor %}
+
+python-pandas:
+  pkgrepo.managed:
+    - name: 'deb http://ppa.launchpad.net/pythonxy/pythonxy-devel/ubuntu precise main'
+    - file: /etc/apt/sources.list.d/pandas.list
+    - keyserver: keyserver.ubuntu.com
+    - keyid: ADC95410
+  pkg.installed:
+    - refresh: True

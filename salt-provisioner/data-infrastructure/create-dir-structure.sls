@@ -1,17 +1,20 @@
-/development:
+/data:
   file.directory:
     - user: vagrant
     - group: vagrant
     - mode: 755
     - makedirs: True
 
-/development/data:
+{% set data_dirs = [
+  'texts',
+  'CSVs'
+] %}
+
+{% for dir in data_dirs %}
+/data/{{dir}}:
   file.directory:
     - user: vagrant
     - group: vagrant
     - mode: 755
     - makedirs: True
-
-/development/scripts:
-  file.symlink:
-    - target: /vagrant/scripts
+{% endfor %}

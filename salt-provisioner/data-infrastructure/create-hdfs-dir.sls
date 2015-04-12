@@ -1,6 +1,6 @@
 create-hdfs-dir:
   cmd.run:
-    - name: 'hdfs dfs -mkdir /development/hdfs-dir'
+    - name: 'hdfs dfs -mkdir /data/hdfs-dir'
     - user: 'vagrant'
-    - creates: /development/hdfs-dir
+    - creates: /data/hdfs-dir
     - onlyif: /usr/local/hadoop/bin/hdfs

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+function leaves-top-words {
+  TEXT="/data/texts/$1.txt"
+  printf "\n%s\n" "$TEXT"
+  python src/languages/python/tools/top-words.py 10 < "$TEXT"
+}
+
+leaves-top-words "metaphorpsum"
+leaves-top-words "gutenberg-book"

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+in2csv /data/CSVs/us-500.csv | head | csvcut -c first_name,county,company_name | csvlook

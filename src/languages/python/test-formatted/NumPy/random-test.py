@@ -6,6 +6,7 @@ import os
 
 # Using parts of Python for Data Analysis - Wes McKinney
 
+
 class RandomTestCase(unittest.TestCase):
   def random_direction_test(self):
     position = 0
@@ -24,5 +25,7 @@ class RandomTestCase(unittest.TestCase):
       pl.title("Random position change for 1000 steps")
       pl.ylabel('Position')
       pl.xlabel('Steps')
-      pl.savefig("reports/languages/python/random-direction.png")
+      filepath = 'reports/languages/python/'
+      if not os.path.isdir(filepath): os.makedirs(filepath)
+      pl.savefig(filepath + "random-direction.png")
       pl.close()

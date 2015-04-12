@@ -2,10 +2,13 @@ import csv
 import urllib2
 import numpy as np
 from pandas import DataFrame
-import matplotlib.pyplot as pl
+import os
+import matplotlib
+matplotlib.use('Agg')
 
 
 def Main():
+  import matplotlib.pyplot as pl
   companies = ['AAPL', 'ADSK', 'GOOG', 'MSFT', 'AUY', 'TWTR', 'YHOO', 'CAT', 'GE', 'CSCO', 'F']
   url = 'http://finance.yahoo.com/d/quotes.csv?s=' + '+'.join(companies) + '&f=nabp'
   response = urllib2.urlopen(url)
@@ -16,7 +19,6 @@ def Main():
   data['Previous close'] = data['Previous close'].astype(float)
   data = data.sort(columns=['Previous close'], ascending=False, axis=0)
 
-  # Create plot
   pl.plot(data['Pricing - Ask'], label='Pricing Ask')
   pl.plot(data['Pricing - Bid'], label='Pricing Bid')
   pl.plot(data['Previous close'], label='Previous Close')
@@ -24,7 +26,10 @@ def Main():
   pl.xticks(np.arange(len(data['Name'])), data['Name'].tolist(), rotation=45)
   pl.legend()
   pl.tight_layout()
-  filepath = 'plots/apis/yahoo_finance/basic.png'
+  filepath = 'reports/APIs/yahoo_finance'
+  if not os.path.isdir('reports/APIs/yahoo_finance'):
+    os.makedirs('reports/APIs/yahoo_finance')
+  filepath += '/basic.png'
   pl.savefig(filepath)
   pl.close()
   print 'A chart was created at ' + filepath

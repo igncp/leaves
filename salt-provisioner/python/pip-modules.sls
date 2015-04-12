@@ -1,13 +1,16 @@
 {% set pip2_modules = [
   'csvkit',
+  'mrjob',
+  'nose',
+  'pygithub',
   'pymongo',
   'pyyaml',
-  'requests_oauthlib',
-  'sqlalchemy',
-  'termcolor',
-  'mrjob',
   'rednose',
+  'requests',
+  'requests_oauthlib',
   'seaborn',
+  'termcolor',
+  'python-linkedin',
 ] %}
 
 {% for module in pip2_modules %}

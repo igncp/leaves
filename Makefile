@@ -1,27 +1,9 @@
-# previous ----
-
-all: install-tools
-
-install-tools: i-python-modules i-jq
-
-i-python-modules:
-	@sudo pip install csvkit
-	@sudo pip install nose
-	@sudo pip install pygithub
-	@sudo pip install requests
-	@sudo pip install requests_oauthlib
-	@sudo pip install python-linkedin
-	@sudo pip install pymongo
-	@sudo pip install pyyaml
-	@sudo pip install seaborn
-	sudo apt-get install python-matplotlib python-tk python-pandas python-scipy
-
-i-jq:
-	@curl -s http://stedolan.github.io/jq/download/linux64/jq > vendors/jq
-	@echo 'Downloaded jq for Linux 64. If that is not your case, download it, place it under vendors with jq name and make it executable'
-
-
-# new -----
+all: set-executables clean-files
 
 set-executables:
 	@find bin -not -name _* | xargs chmod +x # Exclude files beginning with a dash for executables
+
+clean-files: clean-pyc-files
+
+clean-pyc-files:
+	@find . -name *.pyc | xargs rm -f

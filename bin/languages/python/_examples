@@ -1,1 +1,0 @@
-nosetests  src/languages/python --rednose --nologcapture --nocapture

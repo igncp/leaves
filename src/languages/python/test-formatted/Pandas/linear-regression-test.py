@@ -38,6 +38,7 @@ class LinearRegressionTestCase(unittest.TestCase):
       plt.plot(linear_regression, 'r')
       plt.title('Linear Regression Example')
       plt.tight_layout()
-      filepath = 'reports/languages/python/linear-regression.png'
-      plt.savefig(filepath)
+      filepath = 'reports/languages/python/'
+      if not os.path.isdir(filepath): os.makedirs(filepath)
+      plt.savefig(filepath + 'linear-regression.png')
       plt.close()

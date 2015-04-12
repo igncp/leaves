@@ -1,0 +1,1 @@
+nosetests src/languages/python/test-formatted/ --rednose --nologcapture --nocapture
