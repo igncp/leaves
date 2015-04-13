@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# NOTE THAT THIS SCRIPT IS NOT WORKING YET
+
+RELATIVE_DIR=$(dirname "$0")
+HELPERS="$RELATIVE_DIR"/../helpers
+NAME=sentence-count
+SRC="src/big-data/hadoop/$NAME"
+
+sh "$HELPERS"/_remove-and-create.sh "$NAME"
+sh "$HELPERS"/_copy-gutenberg-book-to.sh "$NAME"
+python "$SRC"/job.py -c "$SRC"/mrjob.conf /data/hdfs-dir/sentence-count/gutenberg-book.txt -r hadoop > /data/hdfs-dir/sentence-count/result

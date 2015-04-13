@@ -1,0 +1,1 @@
+hdfs dfs -copyFromLocal /data/texts/gutenberg-book.txt /data/hdfs-dir/"$1"/gutenberg-book.txt

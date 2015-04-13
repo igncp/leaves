@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+RELATIVE_DIR=$(dirname "$0")
+HELPERS="$RELATIVE_DIR"/../helpers/
+
+sh "$HELPERS"/_default-map-reduce.sh word-count gutenberg-book.txt

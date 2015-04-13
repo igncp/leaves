@@ -27,8 +27,7 @@ def Main():
   pl.legend()
   pl.tight_layout()
   filepath = 'reports/APIs/yahoo_finance'
-  if not os.path.isdir('reports/APIs/yahoo_finance'):
-    os.makedirs('reports/APIs/yahoo_finance')
+  if not os.path.isdir(filepath): os.makedirs(filepath)
   filepath += '/basic.png'
   pl.savefig(filepath)
   pl.close()

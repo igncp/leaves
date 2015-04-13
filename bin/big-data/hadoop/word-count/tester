@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+SRC=src/big-data/hadoop/word-count
+
+head -n1000 /data/texts/gutenberg-book.txt | python "$SRC"/mapper.py | sort | python "$SRC"/reduce.py
