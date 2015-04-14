@@ -1,10 +1,9 @@
 import yaml
 from github import Github
-from pandas import Series
 
 
 def Main():
-  credentials = open('apis/github/credentials/credentials.yml', 'r')
+  credentials = open('config/APIs/github/credentials.yml', 'r')
   credentials = yaml.load(credentials)
   ACCESS_TOKEN = credentials['access-token']
   client = Github(ACCESS_TOKEN, per_page=100)

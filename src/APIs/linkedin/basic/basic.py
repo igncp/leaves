@@ -1,10 +1,9 @@
 import yaml
 from linkedin import linkedin
-from pandas import Series
 
 
 def Main():
-  credentials = open('apis/linkedin/credentials/credentials.yml', 'r')
+  credentials = open('config/APIs/linkedin/credentials.yml', 'r')
   cs = yaml.load(credentials)
   authentication = linkedin.LinkedInDeveloperAuthentication(cs['consumer-key'],
     cs['consumer-secret'], cs['user-token'], cs['user-secret'],

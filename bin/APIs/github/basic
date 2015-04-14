@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+RELATIVE_DIR=$(dirname "$0")
+
+sh "$RELATIVE_DIR"/_run-github basic

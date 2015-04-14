@@ -9,7 +9,7 @@ import seaborn as sns
 
 
 def Authentication():
-  credentials = open('apis/linkedin/credentials/credentials.yml', 'r')
+  credentials = open('config/APIs/linkedin/credentials.yml', 'r')
   cs = yaml.load(credentials)
   authentication = linkedin.LinkedInDeveloperAuthentication(cs['consumer-key'],
     cs['consumer-secret'], cs['user-token'], cs['user-secret'],

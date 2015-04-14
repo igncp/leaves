@@ -6,7 +6,7 @@ import numpy as np
 
 
 def Main():
-  credentials = open('apis/github/credentials/credentials.yml', 'r')
+  credentials = open('config/APIs/github/credentials.yml', 'r')
   credentials = yaml.load(credentials)
   ACCESS_TOKEN = credentials['access-token']
   client = Github(ACCESS_TOKEN, per_page=100)
@@ -46,7 +46,8 @@ def Main():
   filepath = 'plots/apis/github/search_repositories.png'
   pl.savefig(filepath, figsize=(1020, 1020), dpi=300)
   pl.close()
-  print 'A chart with high resolution and small font size (to minimize overlaps) was created at ' + filepath
+  print('A chart with high resolution and small font size (to minimize overlaps) was created at ' +
+    filepath)
 
 if __name__ == "__main__":
   Main()
