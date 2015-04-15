@@ -10,7 +10,8 @@ def Main():
     cs['return-url'], linkedin.PERMISSIONS.enums.values())
   application = linkedin.LinkedInApplication(authentication)
   profile = application.get_profile()
-  print 'The account\'s owner name is ' + profile['firstName'] + ' ' + profile['lastName']
+  message = "The account's owner name is {} {}".format(profile['firstName'], profile['lastName'])
+  print message
 
 
 if __name__ == "__main__":
