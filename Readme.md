@@ -16,6 +16,10 @@ As you would see, the directory of the project will be shared with the guest mac
 To be able to run the scripts, you must set them as executables. Just call `make set-executables` in the `/leaves` directory and it will automatically set them for you.
 
 
+## Sources.
+You can check the Sources.md file to see where the data is taken from.
+
+
 ## Structure
 The main directories used in the project:
 - `./bin` : Holds the scripts. Note that some of them (e.g. in the APIs subdirectory) may need to set up credentials in the `config` dir.
