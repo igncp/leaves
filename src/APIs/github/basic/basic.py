@@ -1,16 +1,14 @@
-import yaml
-from github import Github
+import os, sys
+sys.path.insert(0, os.path.realpath(os.path.dirname(__file__) + '/../github_helpers/'))
+import github_helpers
 
 
 def Main():
-  credentials = open('config/APIs/github/credentials.yml', 'r')
-  credentials = yaml.load(credentials)
-  ACCESS_TOKEN = credentials['access-token']
-  client = Github(ACCESS_TOKEN, per_page=100)
+  client = github_helpers.authenticate()
   username = raw_input("Please, enter a user name: ")
   user = client.get_user(username)
 
-  print 'The user\'s displayed name is ' + user.name
+  print "The user's displayed name is " + user.name
 
 
 if __name__ == "__main__":

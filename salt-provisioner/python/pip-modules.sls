@@ -1,16 +1,18 @@
 {% set pip2_modules = [
   'csvkit',
+  'discogs_client',
+  'lxml',
   'mrjob',
   'nose',
   'pygithub',
   'pymongo',
+  'python-linkedin',
   'pyyaml',
   'rednose',
   'requests',
   'requests_oauthlib',
   'seaborn',
   'termcolor',
-  'python-linkedin',
 ] %}
 
 {% for module in pip2_modules %}

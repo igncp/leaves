@@ -1,16 +1,21 @@
-import yaml
-from github import Github
 from pandas import Series
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as pl
 import numpy as np
 
+import os, sys
+inserted_path = '/../github_helpers/'
+sys.path.insert(0, os.path.realpath(os.path.dirname(__file__) + inserted_path))
+import github_helpers
+
 
 def Main():
-  credentials = open('config/APIs/github/credentials.yml', 'r')
-  credentials = yaml.load(credentials)
-  ACCESS_TOKEN = credentials['access-token']
-  client = Github(ACCESS_TOKEN, per_page=100)
+  client = github_helpers.authenticate()
   keywords = raw_input("Please, enter keywords to search repositories: ")
+  if keywords is '':
+    keywords = 'javascript'
+    print 'No keywords provided. It will use the keyword: ' + keywords
   search = client.search_repositories(keywords)
   first_page = search.get_page(0)
 
@@ -18,7 +23,7 @@ def Main():
   languages = languages.dropna()
   languages.sort()
 
-  percentages = (languages.value_counts() / len(languages) * 100).map('{:,.2f} %'.format)
+  percentages = (100.0 * languages.value_counts() / len(languages)).map('{:,.2f} %'.format)
 
   print 'Languages percentage:'
   print percentages
@@ -43,7 +48,9 @@ def Main():
   pl.yscale("log")
   pl.ylabel("Forks")
   pl.tight_layout()
-  filepath = 'plots/apis/github/search_repositories.png'
+  filepath = 'reports/APIs/github'
+  if not os.path.isdir(filepath): os.makedirs(filepath)
+  filepath += '/search_repositories.png'
   pl.savefig(filepath, figsize=(1020, 1020), dpi=300)
   pl.close()
   print('A chart with high resolution and small font size (to minimize overlaps) was created at ' +

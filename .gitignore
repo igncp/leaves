@@ -5,3 +5,4 @@ vendors/*
 credentials.yml
 !/misc/*.png
 .vagrant
+access_token.yml

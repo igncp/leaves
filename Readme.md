@@ -4,13 +4,16 @@
 
 ## Usage
 
-You need to have Vagrant installed on your computer. Then, from a terminal, run:
+You need to have Vagrant installed on your computer. Then, from a terminal, run (this may take several minutes):
+
 `vagrant up`
 
 This command will setup a virtual machine with the configuration set in the Vagrant file, and then install some software and do some configuration in the machine, configured in the `salt-provisioner` dir. Both operations may a long time. Once it finishes, you can enter the virtual machine by:
+
 `vagrant ssh`
 
 As you would see, the directory of the project will be shared with the guest machine in the `/leaves` directory. Once there, you can run the scripts located in the `bin` directory. Note that mostly of them, they will only work if they called from that directory, e.g.:
+
 `./bin/linux-shell/csv-output-table`
 
 To be able to run the scripts, you must set them as executables. Just call `make set-executables` in the `/leaves` directory and it will automatically set them for you.

@@ -2,6 +2,7 @@ base:
   '*':
     - git
     - java
+    - other
     - nodejs
     - vim
     - jq
