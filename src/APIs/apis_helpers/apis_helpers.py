@@ -1,6 +1,6 @@
+import os, sys
 import yaml
-import os
-import sys
+from termcolor import colored as clrd
 
 
 def get_credentials(api_name):
@@ -11,3 +11,11 @@ def get_credentials(api_name):
   data = open(file_path, 'r')
   parsed_data = yaml.load(data)
   return parsed_data
+
+
+def save_fig(plt, directory, name):
+  filepath = 'reports/APIs/' + directory
+  if not os.path.isdir(filepath): os.makedirs(filepath)
+  filepath += '/' + name + '.png'
+  plt.savefig(filepath)
+  print 'A chart was created at ' + clrd(filepath, 'green')

@@ -33,16 +33,12 @@ def generate_bar_plot(data):
   plt.title('Albums years')
   autolabel(ax, bars)
   plt.tight_layout()
-  filepath = 'reports/APIs/discogs'
-  if not os.path.isdir(filepath): os.makedirs(filepath)
-  filepath += '/years.png'
-  plt.savefig(filepath)
+  discogs_helpers.save_fig(plt, 'years')
   plt.close()
-  print 'A chart was created at ' + clrd(filepath, 'green')
 
 
 def Main():
-  max_length = 20
+  max_length = 10
   discogs = discogs_helpers.authenticate()
   keywords = raw_input('Type some keyworks to search by: ')
   if keywords is '':

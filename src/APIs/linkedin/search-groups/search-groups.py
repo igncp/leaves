@@ -50,12 +50,8 @@ def generate_bar_plot(percentages, title):
   plt.xlabel("Word")
   plt.title(title)
   plt.tight_layout()
-  filepath = 'reports/APIs/linkedin'
-  if not os.path.isdir(filepath): os.makedirs(filepath)
-  filepath += '/search_groups.png'
-  plt.savefig(filepath)
+  linkedin_helpers.save_fig(plt, 'search-groups')
   plt.close()
-  print 'A chart was created at ' + clrd(filepath, 'green')
 
 
 def analyze_group(app, group):

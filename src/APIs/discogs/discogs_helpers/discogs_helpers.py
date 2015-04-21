@@ -37,3 +37,7 @@ def authenticate():
     )
     
   return client
+
+
+def save_fig(plt, name):
+  apis_helpers.save_fig(plt, 'discogs', name)

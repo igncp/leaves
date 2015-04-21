@@ -9,3 +9,7 @@ def authenticate():
   ACCESS_TOKEN = credentials['access-token']
   client = Github(ACCESS_TOKEN, per_page=100)
   return client
+
+
+def save_fig(plt, name):
+  apis_helpers.save_fig(plt, 'github', name)

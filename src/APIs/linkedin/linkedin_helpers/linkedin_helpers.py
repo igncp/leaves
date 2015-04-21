@@ -14,3 +14,7 @@ def authenticate():
     credentials['consumer-secret'], credentials['user-token'], credentials['user-secret'],
     credentials['return-url'], linkedin.PERMISSIONS.enums.values())
   return linkedin.LinkedInApplication(authentication)
+
+
+def save_fig(plt, name):
+  apis_helpers.save_fig(plt, 'linkedin', name)

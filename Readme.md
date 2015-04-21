@@ -19,7 +19,7 @@ As you would see, the directory of the project will be shared with the guest mac
 To be able to run the scripts, you must set them as executables. Just call `make set-executables` in the `/leaves` directory and it will automatically set them for you.
 
 
-## Sources.
+## Sources
 You can check the Sources.md file to see where the data is taken from.
 
 
@@ -29,7 +29,7 @@ The main directories used in the project:
 - `./config` : Holds the necessary credentials files for some services (e.g. the LinkedIn API).
 - `./src` : Contains the code that many of the scripts run.
 - `./reports` : Contains output from some programs, e.g. plots.
-- `/data` : Generated in the guest machine, contains the data files used by some software, and the HDFS used by Hadoop.
+- `/data` : Generated in the guest virtual machine, contains the data files used by some software, and the HDFS used by Hadoop.
 
 ## License and Author
 This project is purely educational and it is licensed under the MIT License.

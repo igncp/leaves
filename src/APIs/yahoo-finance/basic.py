@@ -2,9 +2,11 @@ import csv
 import urllib2
 import numpy as np
 from pandas import DataFrame
-import os
 import matplotlib
 matplotlib.use('Agg')
+import os, sys
+sys.path.insert(0, os.path.realpath(os.path.dirname(__file__) + '../../apis_helpers'))
+import apis_helpers
 
 
 def Main():
@@ -26,13 +28,8 @@ def Main():
   pl.xticks(np.arange(len(data['Name'])), data['Name'].tolist(), rotation=45)
   pl.legend()
   pl.tight_layout()
-  filepath = 'reports/APIs/yahoo_finance'
-  if not os.path.isdir(filepath): os.makedirs(filepath)
-  filepath += '/basic.png'
-  pl.savefig(filepath)
+  apis_helpers.save_fig(pl, 'yahoo-finance', 'basic')
   pl.close()
-  print 'A chart was created at ' + filepath
-
 
 if __name__ == "__main__":
   Main()
