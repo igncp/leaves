@@ -1,12 +1,7 @@
 base:
   '*':
-    - git
-    - java
-    - other
-    - nodejs
-    - vim
-    - jq
-    - python
-    - apache-data-toolset
+    - tools
+    - languages
+    - databases
     - bashrc
     - data-infrastructure
