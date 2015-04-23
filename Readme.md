@@ -8,7 +8,7 @@ You need to have Vagrant installed on your computer. Then, from a terminal, run 
 
 `vagrant up`
 
-This command will setup a virtual machine with the configuration set in the Vagrant file, and then install some software and do some configuration in the machine, configured in the `salt-provisioner` dir. Both operations may a long time. Once it finishes, you can enter the virtual machine by:
+This command will setup a virtual machine with the configuration set in the Vagrant file, and then install some software and do some configuration in the machine, configured in the `salt-provisioner` dir. Both operations may take a long time. Once they finish, you can enter the virtual machine by:
 
 `vagrant ssh`
 
