@@ -1,6 +1,15 @@
 alias ls="ls -lah"
 alias tmux="tmux -2" # for vim colors
 alias rm='rm -rf'
+alias c='xclip -selection clipboard'
+alias cp='cp -r'
+alias duu='du -hs'
+alias mkdir='mkdir -p'
+alias tar='tar -xf'
+alias unzip='unzip -q'
+alias xclip='xclip -selection clipboard'
+
+
 
 export JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
 export HADOOP_HOME="/usr/local/hadoop"
