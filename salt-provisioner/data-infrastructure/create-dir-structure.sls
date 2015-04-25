@@ -7,7 +7,8 @@
 
 {% set data_dirs = [
   'texts',
-  'CSVs'
+  'CSVs',
+  'jsons',
 ] %}
 
 {% for dir in data_dirs %}

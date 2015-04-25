@@ -9,6 +9,7 @@ alias tar='tar -xf'
 alias unzip='unzip -q'
 alias xclip='xclip -selection clipboard'
 
+alias ApacheRestart='sudo /etc/init.d/apache2 restart'
 
 
 export JAVA_HOME="/usr/lib/jvm/java-8-oracle/"

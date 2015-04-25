@@ -2,6 +2,8 @@
 
 [![Leaves Logo](/misc/logo.png)](https://github.com/igncp/leaves)
 
+This project is for educational purposes. It uses some useful and powerful tools to get, manage, visualize and analyze data.
+
 ## Usage
 
 You need to have Vagrant installed on your computer. Then, from a terminal, run (this may take several minutes):

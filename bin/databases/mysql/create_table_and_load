@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+RELATIVE_DIR=$(dirname "$0")
+run_query(){ sh "$RELATIVE_DIR"/_run_query "$1"; }
+
+run_query "DROP TABLE IF EXISTS csvUS500"
+
+run_query "CREATE TABLE IF NOT EXISTS csvUS500 (first_name TEXT,
+  last_name TEXT, company_name TEXT, address TEXT, city TEXT, county TEXT,
+  state TEXT, zip TEXT, phone1 TEXT, phone2 TEXT, email TEXT, web TEXT)"
+
+# This approach would be useful if the table already existed, and has data,
+# otherwise it may be better to automatically create the columns with the headers
+run_query "LOAD DATA LOCAL INFILE '/data/CSVs/us-500.csv' INTO TABLE csvUS500
+ FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\r'
+ IGNORE 1 LINES"

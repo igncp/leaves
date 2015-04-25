@@ -4,3 +4,4 @@ include:
   - .create-hdfs-dir
   - .get-texts
   - .get-csvs
+  - .get-jsons

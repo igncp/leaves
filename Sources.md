@@ -20,6 +20,9 @@ Texts
 CSVs
 - us-500: http://www.briandunning.com/sample-data/
 
+JSONs
+- Dummy jsons API: http://jsonplaceholder.typicode.com
+
 APIs
 
 - Yahoo Finance: http://finance.yahoo.com/d/quotes.csv
