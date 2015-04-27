@@ -19,6 +19,7 @@ Texts
 
 CSVs
 - us-500: http://www.briandunning.com/sample-data/
+- Bitcoin values: https://www.quandl.com - Blockchain
 
 JSONs
 - Dummy jsons API: http://jsonplaceholder.typicode.com
