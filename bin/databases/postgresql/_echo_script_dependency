@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "This script needs that the script \`create_table_and_load\` had been called before."
+echo ""

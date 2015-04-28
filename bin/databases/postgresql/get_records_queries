@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+RELATIVE_DIR=$(dirname "$0")
+run_query(){ sh "$RELATIVE_DIR"/_run_query "$1"; }
+
+sh "$RELATIVE_DIR"/_echo_script_dependency
+
+run_query "SELECT first_name, last_name FROM csvus500
+  ORDER BY state ASC LIMIT 1;"
