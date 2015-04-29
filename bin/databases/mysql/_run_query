@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-mysql --local-infile -u vagrant -pfoo leaves -e "$1"
+echo "· Query: $1" | tr -d '\n' | sed -e 's/\r/\\r/g' | xargs echo
+RESULT=`mysql --local-infile -u vagrant -pfoo leaves -e "$1"`
+
+if [ ! -z "$RESULT" ]; then
+  echo "· Result:\n$RESULT"
+fi
+
+echo ""
